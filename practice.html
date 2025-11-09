@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SAT UP - Practice</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="shape circle"></div>
+  <div class="shape square"></div>
+  <div class="shape yellow-bar"></div>
+
+  <header>
+    <h1>🧠 Practice Vocabulary</h1>
+    <p class="subtitle">Tap the card to flip and learn</p>
+  </header>
+
+  <main class="practice-panel">
+
+    <div class="lang-row">
+      <span class="lang-label">Meaning language:</span>
+      <div class="lang-switch">
+        <button class="lang-btn active" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="th">TH</button>
+        <button class="lang-btn" data-lang="jp">JP</button>
+        <button class="lang-btn" data-lang="cn">CN</button>
+        <button class="lang-btn" data-lang="kr">KR</button>
+      </div>
+    </div>
+
+    <div id="flashcard" class="card">
+      <div class="front">
+        <p id="word">Loading...</p>
+      </div>
+      <div class="back">
+        <p id="meaning">Please wait...</p>
+      </div>
+    </div>
+
+    <div class="controls">
+      <button id="prevBtn">◀ Prev</button>
+      <button id="nextBtn">Next ▶</button>
+    </div>
+
+    <div class="back-home">
+      <a href="index.html">🏠 Back to Menu</a>
+    </div>
+  </main>
+
+  <script src="vocab.js"></script>
+  <script src="practice.js"></script>
+</body>
+</html>
