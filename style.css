@@ -1,55 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SAT UP - Practice</title>
-  <link rel="stylesheet" href="style.css">
+  <title>SAT UP Practice</title>
+  <link rel="stylesheet" href="style_new.css">
 </head>
-<body>
+<body class="skywrap">
 
-  <div class="shape circle"></div>
-  <div class="shape square"></div>
-  <div class="shape yellow-bar"></div>
+  <div class="bgdot orbA"></div>
+  <div class="bgdot orbB"></div>
+  <div class="bgdot orbC"></div>
 
-  <header>
-    <h1>🧠 Practice Vocabulary</h1>
-    <p class="subtitle">Tap the card to flip and learn</p>
+  <header class="headwrapZ">
+    <h1 class="titleZ">🧠 Practice Vocabulary</h1>
+    <p class="subZ">Tap the card to flip and learn</p>
   </header>
 
-  <main class="practice-panel">
+  <main class="panelZ">
 
-    <div class="lang-row">
-      <span class="lang-label">Meaning language:</span>
-      <div class="lang-switch">
-        <button class="lang-btn active" data-lang="en">EN</button>
-        <button class="lang-btn" data-lang="th">TH</button>
-        <button class="lang-btn" data-lang="jp">JP</button>
-        <button class="lang-btn" data-lang="cn">CN</button>
-        <button class="lang-btn" data-lang="kr">KR</button>
+    <div class="langboxZ">
+      <span class="langtagZ">Meaning language:</span>
+      <div class="langswitchZ">
+        <button class="langbtnZ active" data-lang="en">EN</button>
+        <button class="langbtnZ" data-lang="th">TH</button>
+        <button class="langbtnZ" data-lang="jp">JP</button>
+        <button class="langbtnZ" data-lang="cn">CN</button>
+        <button class="langbtnZ" data-lang="kr">KR</button>
       </div>
     </div>
 
-    <div id="flashcard" class="card">
-      <div class="front">
+    <div id="flashcard" class="flipcrateZ">
+      <div class="fsideZ">
         <p id="word">Loading...</p>
       </div>
-      <div class="back">
+      <div class="bsideZ">
         <p id="meaning">Please wait...</p>
       </div>
     </div>
 
-    <div class="controls">
-      <button id="prevBtn">◀ Prev</button>
-      <button id="nextBtn">Next ▶</button>
+    <div class="navctrlZ">
+      <button id="prevBtn" class="navbtnZ">◀ Prev</button>
+      <button id="nextBtn" class="navbtnZ">Next ▶</button>
     </div>
 
   </main>
 
-
-  <div class="back-home">
-    <a href="index.html">🏠 Back to Menu</a>
-  </div>
+  <div class="homerZ"><a href="index.html">🏠 Back to Menu</a></div>
 
   <script src="vocab.js"></script>
   <script src="practice.js"></script>
