@@ -538,3 +538,281 @@ h1 {
   background: #ff2b2b;
   color: #fff;
 }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #0834f5;
+  min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===== SHAPES ===== */
+.shape {
+  position: absolute;
+  z-index: 0;
+  opacity: 0.95;
+  animation-timing-function: ease-in-out;
+}
+
+.circle {
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  background: #ff2b2b;
+  top: 8%;
+  left: 15%;
+  animation: bounceCircle 6s infinite alternate;
+}
+
+.square {
+  width: 220px;
+  height: 220px;
+  background: #000;
+  top: 45%;
+  left: 25%;
+  transform: rotate(10deg);
+  animation: bounceSquare 7s infinite alternate;
+}
+
+.yellow-bar {
+  width: 220px;
+  height: 45px;
+  background: #ffcc00;
+  top: 38%;
+  right: 15%;
+  transform: rotate(-25deg);
+  animation: bounceTriangle 8s infinite alternate;
+}
+
+/* ====== ANIMATIONS ====== */
+@keyframes bounceCircle {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  20% { transform: translate(40px, 60px) rotate(15deg); }
+  40% { transform: translate(-60px, -30px) rotate(-10deg); }
+  60% { transform: translate(30px, -50px) rotate(20deg); }
+  80% { transform: translate(-50px, 30px) rotate(-5deg); }
+  100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+@keyframes bounceSquare {
+  0% { transform: translate(0, 0) rotate(10deg); }
+  25% { transform: translate(50px, -30px) rotate(25deg); }
+  50% { transform: translate(-70px, 40px) rotate(-20deg); }
+  75% { transform: translate(40px, 60px) rotate(10deg); }
+  100% { transform: translate(0, 0) rotate(10deg); }
+}
+
+@keyframes bounceTriangle {
+  0% { transform: translate(0, 0) rotate(-25deg); }
+  25% { transform: translate(-60px, 30px) rotate(-10deg); }
+  50% { transform: translate(80px, -50px) rotate(-35deg); }
+  75% { transform: translate(-40px, -60px) rotate(-15deg); }
+  100% { transform: translate(0, 0) rotate(-25deg); }
+}
+
+/* ===== HEADER ===== */
+header {
+  z-index: 2;
+  color: #fff;
+  padding: 60px 24px 10px;
+}
+
+h1 {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.subtitle {
+  color: rgba(255,255,255,0.8);
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+/* ===== PRACTICE PANEL ===== */
+.practice-panel {
+  background: #fff;
+  width: 100%;
+  border-radius: 40px 40px 0 0;
+  z-index: 5;
+  padding: 28px 24px 100px; /* เผื่อพื้นที่ให้ปุ่มล่าง */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  box-shadow: 0 -5px 20px rgba(0,0,0,0.15);
+  margin-top: auto;
+}
+
+.card {
+  width: 280px;
+  max-width: 90vw;
+  height: 180px;
+  background: #001aff;
+  color: #fff;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.6s ease;
+  transform-style: preserve-3d;
+  position: relative;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+.card .front,
+.card .back {
+  position: absolute;
+  backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  border-radius: 25px;
+  padding: 16px;
+  text-align: center;
+}
+
+.card .back {
+  transform: rotateY(180deg);
+  background: #ff2b2b;
+  color: #fff;
+}
+
+.card.flipped {
+  transform: rotateY(180deg);
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  margin-top: 22px;
+  flex-wrap: wrap;
+}
+
+.controls button {
+  background: #000;
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 10px 22px;
+  cursor: pointer;
+  color: #fff;
+  transition: 0.3s;
+}
+
+.controls button:hover {
+  background: #ff2b2b;
+}
+
+/* ===== LANGUAGE SWITCH ===== */
+.lang-row {
+  width: 100%;
+  max-width: 340px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.lang-label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #000;
+}
+
+.lang-switch {
+  display: flex;
+  background: #f3f3f3;
+  border-radius: 14px;
+  padding: 8px;
+  gap: 6px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.lang-btn {
+  background: #000;
+  color: #fff;
+  border: none;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 10px;
+  padding: 8px 14px;
+  cursor: pointer;
+  line-height: 1;
+  transition: 0.25s;
+}
+
+.lang-btn.active {
+  background: #0834f5;
+  color: #fff;
+  box-shadow: 0 0 10px rgba(8,52,245,0.5);
+  transform: scale(1.05);
+}
+
+.lang-btn:not(.active):hover {
+  background: #ff2b2b;
+}
+
+/* ===== BACK HOME BUTTON (ล่างหน้าจอ) ===== */
+.back-home {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  bottom: 18px;
+  left: 0;
+  z-index: 50;
+}
+
+.back-home a {
+  color: #000;
+  background: #ffe600;
+  text-decoration: none;
+  font-weight: 700;
+  padding: 11px 26px;
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  font-size: 15px;
+  transition: 0.25s;
+}
+
+.back-home a:hover {
+  background: #ff2b2b;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+/* รองรับจอเล็กมาก ๆ */
+@media (max-height: 640px) {
+  header {
+    padding-top: 40px;
+  }
+
+  .practice-panel {
+    padding-top: 20px;
+  }
+
+  .card {
+    height: 160px;
+  }
+}
